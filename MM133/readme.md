@@ -4,9 +4,9 @@ Task: https://www.topcoder.com/challenges/5fb2b54f-055e-4059-8687-ebaa8dbd8a18?t
 The core of my solution is assigning a probability for each character at a given position.
 There are probabilities for
 * a correct `*`-response: 1 - 2/3 * C
-* a correct `./+`-response: 1 - C/3
+* a correct `.`/`+`-response: 1 - C/3
 * an incorrect `*`-response: C/3
-* an incorrect `./+`-response: 2/3 * C
+* an incorrect `.`/`+`-response: 2/3 * C
 (I consider `.` and `+` the same here, so replacing `+` by a `.` is still considered correct)
 
 These change a bit, when the original guess was a space. Obviously a `.` is always corrupted, as the number of words is fixed.
@@ -14,7 +14,7 @@ I confirmed my maths with Monto Carlo simulations which gave the same probabilit
 
 The probability of a position having a certain letter also depends on the guesses of the other letters at that same position: When guessing 'A' twice results in `**` and guessing 'B' once also results in a `*`, then that result of 'B' has to be wrong for 'A' to be the correct letter.
 
-I also tried to generalize this for a sequence of `./+` from the same guess and same letter (e.g. in `++..+.` the last `+` is most likely incorrect) but failed horribly to do the math on this. So the only thing I have in place is an estimation whether a certain letter isn't in the phrase at all. If it returns a `.` rather than `+` in most cases, we don't have to hope for a `*` anywhere.
+I also tried to generalize this for a sequence of `.`/`+` from the same guess and same letter (e.g. in `++..+.` the last `+` is most likely incorrect) but failed horribly to do the math on this. So the only thing I have in place is an estimation whether a certain letter isn't in the phrase at all. If it returns a `.` rather than `+` in most cases, we don't have to hope for a `*` anywhere.
 
 Implementation: https://github.com/eulerscheZahl/Topcoder/blob/master/MM133/Letter.cs#L89-L111
 
