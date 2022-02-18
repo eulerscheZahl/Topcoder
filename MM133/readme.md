@@ -16,7 +16,7 @@ The probability of a position having a certain letter also depends on the guesse
 
 I also tried to generalize this for a sequence of `.`/`+` from the same guess and same letter (e.g. in `++..+.` the last `+` is most likely incorrect) but failed horribly to do the math on this. So the only thing I have in place is an estimation whether a certain letter isn't in the phrase at all. If it returns a `.` rather than `+` in most cases, we don't have to hope for a `*` anywhere.
 
-Implementation: https://github.com/eulerscheZahl/Topcoder/blob/master/MM133/Letter.cs#L89-L111
+Implementation: https://github.com/eulerscheZahl/Topcoder/blob/master/MM133/Letter.cs#L59-L86
 
 # word storage and selection
 I put all the letters in a trie. Then I pick them one by one of the fly while trying to find the a fitting word.
