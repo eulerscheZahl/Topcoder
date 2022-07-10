@@ -1,0 +1,26 @@
+#!/usr/bin/bash
+
+apt update
+apt install i3 dmenu -y
+apt install dotnet-sdk-6.0 -y
+apt install code -y
+apt install git -y
+apt install meld
+apt install openjdk-17-jre -y
+apt install python3.9 -y
+apt install pari-gp -y
+apt install chromium-browser
+apt install zsh
+apt install parcellite
+sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+
+code --install-extension ms-dotnettools.csharp
+code --install-extension visualstudioexptteam.vscodeintellicode
+code --install-extension vscode-icons-team.vscode-icons
+
+mkdir ~/.config
+mkdir ~/.config/i3
+mkdir ~/.config/i3status
+wget https://raw.github.com/eulerscheZahl/Topcoder/master/setup/i3_config -O ~/.config/i3/config
+wget https://raw.github.com/eulerscheZahl/Topcoder/master/setup/i3status_config -O ~/.config/i3status/config
+
