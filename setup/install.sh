@@ -5,7 +5,7 @@ sudo dpkg -i packages-microsoft-prod.deb
 rm packages-microsoft-prod.deb
 
 apt update
-sudo get install gpg -y
+sudo apt install gpg -y
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
 sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
@@ -26,6 +26,7 @@ apt install code -y
 code --install-extension ms-dotnettools.csharp
 code --install-extension visualstudioexptteam.vscodeintellicode
 code --install-extension vscode-icons-team.vscode-icons
+code --install-extension kreativ-software.csharpextensions
 apt install git -y
 apt install meld -y
 
