@@ -1,6 +1,7 @@
 Problem statement: https://www.topcoder.com/challenges/81d26476-fb3c-4e4e-9ffe-7ee17c0438ab?tab=details
 
-I approached this problem with a beam search.
+I approached this problem with a beam search. The side values are not fixed, but recomputed during each step of the beam search in order to maximize the score.
+
 On smaller maps that's all I do: pick a starting point at random and run the beam until there are no more valid moves. Then repeat it again from another starting point as long as there is time.
 
 For larger maps I split the whole board into smaller regions and use a hardcoded path across them to make sure that I can reach the starting point again and get the loop bonus.
