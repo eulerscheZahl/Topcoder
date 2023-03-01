@@ -17,7 +17,7 @@ Then we have to piece the paths for each builder together. This possibly means l
 Sometimes you have different builders that each defend their own territory (or some of them team up, while others are isolated). It's unlikely that you get the best plan for all of those distinct groups in the same run. Therefore I extract solutions for groups of builders and try to put them together to a better overall solution
 
 ## Scores
-On seed 78 I only get a score of 95, which is significantly worse than the 107 from the animation in the statement. My move generator is unable to find the amount of teamwork down around the bottom tap.
+On seed 78 I only get a score of 95, which is significantly worse than the 107 from the animation in the statement. My move generator is unable to find the amount of teamwork done around the bottom tap.
 ```
 Test Case  #1: Score =  43
 Test Case  #2: Score = 503
