@@ -71,7 +71,7 @@ public class Board : IEquatable<Board>
             Guards.Remove(guard);
             Score += BribeCost;
             if (guard.IsBlocking) BribedBlocking++;
-            BribeReimburse += 0.2 * (200 - BribeCost) / 200;
+            BribeReimburse += 0.1;
             foreach (Coin c in Coins) BribeReimburse += bribeMatrix[c.ID, guard.ID];
         }
         if (OutOfBounds()) Score -= 5000;
